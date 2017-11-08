@@ -196,3 +196,33 @@ void Insertsort(int a[], int n)
 		}
 	}
 }
+
+//初始化向量
+void init_vector(vector<int>& vec)
+{
+	vec.push_back(1);
+	vec.push_back(1);
+	vec.push_back(1);
+	vec.push_back(2);
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(6);
+	vec.push_back(6);
+}
+
+int fabonacci(int n)
+{
+	int a = 0,b = 1;
+	if (n == 0)
+		return a;
+	if (n == 1)
+		return b;
+	int tmp = 0;
+	for (int i = 0; i< n-1; i++)
+	{
+		tmp = a;
+		a = b;
+		b = tmp + a;
+	}
+	return b;
+}

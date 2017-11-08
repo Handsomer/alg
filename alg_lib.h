@@ -28,3 +28,7 @@ int getNum(vector<int>& vec);
 void BubbleSort(int a[], int n);
 //插入排序
 void Insertsort(int a[], int n);
+//初始化向量,初始化列表,初始化vector列表，序列为1,1,1,2,2,3,6,6
+void init_vector(vector<int>& vec);
+//斐波那契生成——非递归生成
+int fabonacci(int n);
