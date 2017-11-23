@@ -230,15 +230,18 @@ int fabonacci(int n)
 
 vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
 {
-    int lineNums = nums.length,lineLength = nums[0].length;
-    if(lineLength*lineNums != r*c)
+    int rows = nums.size(), cols = nums[0].size();
+    if (r * c != rows * cols)  return nums;
+    vector<vector<int> >  reshaped(r);
+    int i = 0,j = 0;
+    for (int m = 0; m < rows ; ++m)
     {
-        return nums;
+        for (int n = 0; n < cols; ++n)
+        {
+            reshaped[i].push_back(nums[m][n]);
+            if((++j)%c == 0) ++i;
+        }
     }
-    int[][] resheped  = new int[r][c];
-    for (int i =0 ; i < lineLength * linsNums ; i++)
-    {
-        resheped[i/c][i%c] = nums[i/lineLength][i%lineLength];
-    }
-    return resheped;
+    return reshaped;
 }
+
