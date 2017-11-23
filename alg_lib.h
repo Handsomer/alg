@@ -32,3 +32,7 @@ void Insertsort(int a[], int n);
 void init_vector(vector<int>& vec);
 //斐波那契生成——非递归生成
 int fabonacci(int n);
+
+//566. Reshape the Matrix
+//    实现根据r,c值 返回值
+vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);

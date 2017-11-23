@@ -26,7 +26,8 @@ void BubbleSort(int nArray[], int n)
 }
 
 
-TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2)
+{
 	if (t1)
 	{
 		if (t2)
@@ -225,4 +226,19 @@ int fabonacci(int n)
 		b = tmp + a;
 	}
 	return b;
+}
+
+vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
+{
+    int lineNums = nums.length,lineLength = nums[0].length;
+    if(lineLength*lineNums != r*c)
+    {
+        return nums;
+    }
+    int[][] resheped  = new int[r][c];
+    for (int i =0 ; i < lineLength * linsNums ; i++)
+    {
+        resheped[i/c][i%c] = nums[i/lineLength][i%lineLength];
+    }
+    return resheped;
 }
