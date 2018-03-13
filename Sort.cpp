@@ -245,3 +245,32 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
     return reshaped;
 }
 
+//Ìæ»»¿Õ¸ñÎª£²£°£¥
+void replaceSpace(char *str,int length)
+{
+    int n_space = 0,n_total = 0;
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        n_total += 1;
+        if (str[i] == ' ') n_space += 1;
+    }
+    int new_length = n_total + 2 * n_space;
+    if(length < new_length) return;
+    int final_flag = new_length - 1;
+    for(int i = n_total-1; i >= 0; i--)
+    {
+        if(str[i] != ' ')
+        {
+            str[final_flag] = str[i];
+            final_flag--;
+        }else
+        {
+            str[final_flag] = '%';
+            final_flag--;
+            str[final_flag] = '0';
+            final_flag--;
+            str[final_flag] = '2';
+            final_flag--;
+        }
+    }
+}

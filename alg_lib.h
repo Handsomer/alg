@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstring>
+#include <map>
+
 using  namespace std;
 
 void BubbleSort(int nArray[], int n);
@@ -36,3 +39,6 @@ int fabonacci(int n);
 //566. Reshape the Matrix
 //    实现根据r,c值 返回值
 vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
+
+//替换字符转中的空格为%20
+void replaceSpace(char *str,int length);
