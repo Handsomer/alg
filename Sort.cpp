@@ -274,3 +274,22 @@ void replaceSpace(char *str,int length)
         }
     }
 }
+
+
+vector<int> printListFromTailToHead(ListNode* head)
+{
+	std::stack<ListNode*> node;
+	ListNode* p_node = head;
+	while(p_node != NULL)
+	{
+		node.push(p_node);
+        p_node = p_node->next;
+	}
+    while(!node.empty())
+    {
+        p_node = node.top();
+        cout<<p_node->val<<endl;
+        node.pop();
+    }
+
+}

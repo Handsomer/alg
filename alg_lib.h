@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cstring>
 #include <map>
+#include <stack>
 
 using  namespace std;
 
@@ -15,7 +16,13 @@ struct TreeNode {
 	//	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 
 };
-
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+			val(x), next(NULL) {
+	}
+};
 
 TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
 void  CreateTree1(TreeNode * p_tree);
@@ -42,3 +49,8 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
 
 //替换字符转中的空格为%20
 void replaceSpace(char *str,int length);
+
+//从尾到头打印链表
+vector<int> printListFromTailToHead(ListNode* head);
+
+
