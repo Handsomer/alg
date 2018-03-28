@@ -92,3 +92,4 @@ private:
 
 //Ï£¶ûÅÅĞò
 void shellsort(int *a, int n);
+void shellSort2(int *a,int n);

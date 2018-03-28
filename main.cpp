@@ -3,7 +3,7 @@
 int main()
 {
     int narry[] = {1,4,2,3,9,6};
-    shellsort(narry,5);
+    shellSort2(narry,6);
     for(int i = 0; i < 6; i++)
         cout<<narry[i]<<endl;
     system("pause");
