@@ -288,8 +288,40 @@ vector<int> printListFromTailToHead(ListNode* head)
     while(!node.empty())
     {
         p_node = node.top();
-        cout<<p_node->val<<endl;
+        cout << p_node->val << endl;
         node.pop();
     }
 
+}
+
+// 根据前序遍历和中序遍历,重建二叉树
+TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin)
+{
+
+}
+
+//希尔排序实现
+void shellsort(int *a, int n)
+{
+    int j,gap = 0;
+    for (gap = n/2; gap > 0; gap /= 2)
+    {
+        for(int i = 0; i < gap; i++)
+        {
+            for(j = i + gap; j < n; j += gap)
+            {
+                if(a[j-gap] > a[j])
+                {
+                    int n_tmp = a[j];
+                    int k = j - gap;
+                    while(k > 0 && a[k] > n_tmp)
+                    {
+                        a[k + gap] = a[k];
+                        k -= gap;
+                    }
+                    a[k + gap] = n_tmp;
+                }
+            }
+        }
+    }
 }
