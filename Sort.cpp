@@ -245,3 +245,27 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
     return reshaped;
 }
 
+
+//找到矩阵中的元素
+bool FindNumInNm(int target, vector<vector<int> > array)
+{
+    int rows = array.size(), clos = array[0].size();
+    bool bflag = false;
+    for (int i = clos-1; i >= 0; i--)
+    {
+        for(int j = 0; j <= rows -1; j++)
+        {
+            if (i < 0 | j >= rows ) return bflag;
+            if (target < array[i][j]) i--;
+            if (target == array[i][j])
+            {
+                bflag = true;
+                cout<<i<<j<<endl;
+                break;
+            }
+            if (target > array[i][j]) j++;
+        }
+
+    }
+    return bflag;
+}

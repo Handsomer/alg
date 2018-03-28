@@ -36,3 +36,5 @@ int fabonacci(int n);
 //566. Reshape the Matrix
 //    实现根据r,c值 返回值
 vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
+
+bool FindNumInNm(int target, vector<vector<int> > array);
