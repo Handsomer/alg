@@ -246,6 +246,7 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
 }
 
 
+
 //找到矩阵中的元素
 bool FindNumInNm(int target, vector<vector<int> > array)
 {
@@ -268,4 +269,105 @@ bool FindNumInNm(int target, vector<vector<int> > array)
 
     }
     return bflag;
+}
+
+//替换空格为２０％
+void replaceSpace(char *str,int length)
+{
+    int n_space = 0,n_total = 0;
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        n_total += 1;
+        if (str[i] == ' ') n_space += 1;
+    }
+    int new_length = n_total + 2 * n_space;
+    if(length < new_length) return;
+    int final_flag = new_length - 1;
+    for(int i = n_total-1; i >= 0; i--)
+    {
+        if(str[i] != ' ')
+        {
+            str[final_flag] = str[i];
+            final_flag--;
+        }else
+        {
+            str[final_flag] = '%';
+            final_flag--;
+            str[final_flag] = '0';
+            final_flag--;
+            str[final_flag] = '2';
+            final_flag--;
+        }
+    }
+}
+
+
+vector<int> printListFromTailToHead(ListNode* head)
+{
+	std::stack<ListNode*> node;
+	ListNode* p_node = head;
+	while(p_node != NULL)
+	{
+		node.push(p_node);
+        p_node = p_node->next;
+	}
+    while(!node.empty())
+    {
+        p_node = node.top();
+        cout << p_node->val << endl;
+        node.pop();
+    }
+
+}
+
+// 根据前序遍历和中序遍历,重建二叉树
+TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin)
+{
+
+}
+
+//希尔排序实现
+void shellsort(int *a, int n)
+{
+    int j,gap = 0;
+    for (gap = n/2; gap > 0; gap /= 2)
+    {
+        for(int i = 0; i < gap; i++)
+        {
+            for(j = i + gap; j < n; j += gap)
+            {
+                if(a[j-gap] > a[j])
+                {
+                    int n_tmp = a[j];
+                    int k = j - gap;
+                    while(k > 0 && a[k] > n_tmp)
+                    {
+                        a[k + gap] = a[k];
+                        k -= gap;
+                    }
+                    a[k + gap] = n_tmp;
+                }
+            }
+        }
+    }
+}
+
+void shellSort2(int *a,int n)
+{
+	int j,gap = 0;
+	for(gap = n/2; gap > 0; gap /= 2)
+		for(j = gap; j < n; j++)
+		{
+			if(a[j] < a[j - gap])
+			{
+				int n_tmp = a[j];
+				int k = j - gap;
+				while(k >= 0 && a[k] > n_tmp)
+				{
+					a[k + gap] = a[k];
+					k -= gap;
+				}
+				a[k+gap] = n_tmp;
+			}
+		}
 }
