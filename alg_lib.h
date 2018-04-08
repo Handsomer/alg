@@ -43,6 +43,8 @@ int fabonacci(int n);
 //566. Reshape the Matrix
 //    实现根据r,c值 返回值
 vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
+
+bool FindNumInNm(int target, vector<vector<int> > array);
 //替换字符转中的空格为%20
 void replaceSpace(char *str,int length);
 //从尾到头打印链表
