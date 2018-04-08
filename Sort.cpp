@@ -325,23 +325,24 @@ void shellsort(int *a, int n)
         }
     }
 }
-
-void shellSort2(int *a,int n)
+void selectSort(int *a,int n)
 {
-	int j,gap = 0;
-	for(gap = n/2; gap > 0; gap /= 2)
-		for(j = gap; j < n; j++)
-		{
-			if(a[j] < a[j - gap])
-			{
-				int n_tmp = a[j];
-				int k = j - gap;
-				while(k >= 0 && a[k] > n_tmp)
-				{
-					a[k + gap] = a[k];
-					k -= gap;
-				}
-				a[k+gap] = n_tmp;
-			}
-		}
+    int i,j,nMinIndex;
+    for(i = 0; i < n; i++)
+    {
+        nMinIndex = i;
+        for(j = i + 1; j < n ; j++)
+        {
+            if(a[j] < a[nMinIndex])
+                nMinIndex = j;
+        }
+        Swap(a[i],a[nMinIndex]);
+    }
+}
+
+inline void Swap(int &a, int &b)
+{
+    int n_tmp = a;
+    a = b;
+    b = n_tmp;
 }

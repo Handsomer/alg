@@ -92,4 +92,7 @@ private:
 
 //希尔排序
 void shellsort(int *a, int n);
-void shellSort2(int *a,int n);
+//选择排序
+void selectSort(int *a, int n);
+//交换数组中的元素
+inline void Swap(int &a, int &b);
