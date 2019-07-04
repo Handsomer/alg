@@ -82,7 +82,7 @@ void  CreateTree1(TreeNode * p_tree)
 	p_3->right = NULL;
 }
 
-//2,1,3,NULL,4,NULL£¬7
+//2,1,3,NULL,4,NULLï¼Œ7
 void  CreateTree2(TreeNode * p_tree)
 {
 	p_tree->val = 2;
@@ -132,7 +132,7 @@ int arrayPairSum(vector<int>& nums)
 	return nSum;
 }
 
-//ÅĞ¶ÏÁ½¸öÊıµÄ´óĞ¡
+//åˆ¤æ–­ä¸¤ä¸ªæ•°çš„å¤§å°
 bool sortBy(int a, int b)
 {
 	return a < b;
@@ -155,7 +155,7 @@ int getNum(vector<int>& nums)
 	return index;
 }
 
-//Ã°ÅİÅÅĞò
+//å†’æ³¡æ’åº
 void BubbleSort1(int a[], int n)
 {
 	int j, k;
@@ -185,20 +185,20 @@ void Insertsort(int a[], int n)
 		for (j = i - 1; j >= 0; j--)
 			if (a[j] < a[i])
 				break;
-		//Èç¹ûÕÒµ½ÁËÒ»¸öºÏÊÊµÄÎ»ÖÃ
+		//å¦‚æœæ‰¾åˆ°äº†ä¸€ä¸ªåˆé€‚çš„ä½ç½®
 		if (j != i - 1)
 		{
-			//½«±Èa[i]´óµÄÊı¾İÏòºóÒÆ
+			//å°†æ¯”a[i]å¤§çš„æ•°æ®å‘åç§»
 			int temp = a[i];
 			for (k = i - 1; k > j; k--)
 				a[k + 1] = a[k];
-			//½«a[i]·Åµ½ÕıÈ·µÄÎ»ÖÃÉÏ
+			//å°†a[i]æ”¾åˆ°æ­£ç¡®çš„ä½ç½®ä¸Š
 			a[k + 1] = temp;
 		}
 	}
 }
 
-//³õÊ¼»¯ÏòÁ¿
+//åˆå§‹åŒ–å‘é‡
 void init_vector(vector<int>& vec)
 {
 	vec.push_back(1);
@@ -247,7 +247,7 @@ vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
 
 
 
-//ÕÒµ½¾ØÕóÖĞµÄÔªËØ
+//æ‰¾åˆ°çŸ©é˜µä¸­çš„å…ƒç´ 
 bool FindNumInNm(int target, vector<vector<int> > array)
 {
     int rows = array.size(), clos = array[0].size();
@@ -271,7 +271,7 @@ bool FindNumInNm(int target, vector<vector<int> > array)
     return bflag;
 }
 
-//Ìæ»»¿Õ¸ñÎª£²£°£¥
+//æ›¿æ¢ç©ºæ ¼ä¸ºï¼’ï¼ï¼…
 void replaceSpace(char *str,int length)
 {
     int n_space = 0,n_total = 0;
@@ -320,13 +320,13 @@ vector<int> printListFromTailToHead(ListNode* head)
 
 }
 
-// ¸ù¾İÇ°Ğò±éÀúºÍÖĞĞò±éÀú,ÖØ½¨¶ş²æÊ÷
+// æ ¹æ®å‰åºéå†å’Œä¸­åºéå†,é‡å»ºäºŒå‰æ ‘
 TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin)
 {
 
 }
 
-//Ï£¶ûÅÅĞòÊµÏÖ
+//å¸Œå°”æ’åºå®ç°
 void shellsort(int *a, int n)
 {
     int j,gap = 0;
@@ -352,7 +352,7 @@ void shellsort(int *a, int n)
     }
 }
 
-//Ñ¡ÔñÅÅĞòÊµÏÖ
+//é€‰æ‹©æ’åºå®ç°
 void selectSort(int *a,int n)
 {
     int i,j,nMinIndex;
