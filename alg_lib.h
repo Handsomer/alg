@@ -28,32 +28,32 @@ TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
 void  CreateTree1(TreeNode * p_tree);
 void  CreateTree2(TreeNode * p_tree);
 void pre(TreeNode* p_root);
-int arrayPairSum(vector<int>& nums);//vector ĞèÒªÊ¹ÓÃ using namespace std; À´ÉùÃ÷ÏÂ
+int arrayPairSum(vector<int>& nums);//vector éœ€è¦ä½¿ç”¨ using namespace std; æ¥å£°æ˜ä¸‹
 bool sortBy(int a, int b);
-//ÕÒµ½Á¬ĞøÈı¸öÒÔÄÚ£¬¼¯ºÏµÄ³¤¶È
+//æ‰¾åˆ°è¿ç»­ä¸‰ä¸ªä»¥å†…ï¼Œé›†åˆçš„é•¿åº¦
 int getNum(vector<int>& vec);
-//Ã°ÅİÅÅĞò
+//å†’æ³¡æ’åº
 void BubbleSort(int a[], int n);
-//²åÈëÅÅĞò
+//æ’å…¥æ’åº
 void Insertsort(int a[], int n);
-//³õÊ¼»¯ÏòÁ¿,³õÊ¼»¯ÁĞ±í,³õÊ¼»¯vectorÁĞ±í£¬ĞòÁĞÎª1,1,1,2,2,3,6,6
+//åˆå§‹åŒ–å‘é‡,åˆå§‹åŒ–åˆ—è¡¨,åˆå§‹åŒ–vectoråˆ—è¡¨ï¼Œåºåˆ—ä¸º1,1,1,2,2,3,6,6
 void init_vector(vector<int>& vec);
-//ì³²¨ÄÇÆõÉú³É¡ª¡ª·Çµİ¹éÉú³É
+//æ–æ³¢é‚£å¥‘ç”Ÿæˆâ€”â€”éé€’å½’ç”Ÿæˆ
 int fabonacci(int n);
 //566. Reshape the Matrix
-//    ÊµÏÖ¸ù¾İr,cÖµ ·µ»ØÖµ
+//    å®ç°æ ¹æ®r,cå€¼ è¿”å›å€¼
 vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
 
 bool FindNumInNm(int target, vector<vector<int> > array);
-//Ìæ»»×Ö·û×ªÖĞµÄ¿Õ¸ñÎª%20
+//æ›¿æ¢å­—ç¬¦è½¬ä¸­çš„ç©ºæ ¼ä¸º%20
 void replaceSpace(char *str,int length);
-//´ÓÎ²µ½Í·´òÓ¡Á´±í
+//ä»å°¾åˆ°å¤´æ‰“å°é“¾è¡¨
 vector<int> printListFromTailToHead(ListNode* head);
-// ¸ù¾İÇ°Ğò±éÀúºÍÖĞĞò±éÀú,ÖØ½¨¶ş²æÊ÷
+// æ ¹æ®å‰åºéå†å’Œä¸­åºéå†,é‡å»ºäºŒå‰æ ‘
 TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin);
 
 
-//Á½¸öÕ»À´ÊµÏÖÒ»¸ö¶ÓÁĞ
+//ä¸¤ä¸ªæ ˆæ¥å®ç°ä¸€ä¸ªé˜Ÿåˆ—
 class CQueue
 {
 public:
@@ -92,9 +92,9 @@ private:
     stack<int> stack2;
 };
 
-//Ï£¶ûÅÅĞò
+//å¸Œå°”æ’åº
 void shellsort(int *a, int n);
-//Ñ¡ÔñÅÅĞò
+//é€‰æ‹©æ’åº
 void selectSort(int *a, int n);
-//½»»»Êı×éÖĞµÄÔªËØ
+//äº¤æ¢æ•°ç»„ä¸­çš„å…ƒç´ 
 inline void Swap(int &a, int &b);
