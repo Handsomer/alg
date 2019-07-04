@@ -374,3 +374,14 @@ inline void Swap(int &a, int &b)
     a = b;
     b = n_tmp;
 }
+
+
+void Mirror(TreeNode *pRoot)
+{
+	if (pRoot == NULL) return;
+	TreeNode * pTmp = pRoot->left;
+	pRoot->left = pRoot->right;
+	pRoot->right = pTmp;
+	Mirror(pRoot->left);
+	Mirror(pRoot->right);
+}

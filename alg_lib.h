@@ -51,7 +51,8 @@ void replaceSpace(char *str,int length);
 vector<int> printListFromTailToHead(ListNode* head);
 // 根据前序遍历和中序遍历,重建二叉树
 TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin);
-
+// 实现二叉树的镜像翻转
+void Mirror(TreeNode *pRoot);
 
 //两个栈来实现一个队列
 class CQueue
