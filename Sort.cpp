@@ -385,3 +385,49 @@ void Mirror(TreeNode *pRoot)
 	Mirror(pRoot->left);
 	Mirror(pRoot->right);
 }
+
+
+
+ListNode* EntryNodeOfLoop(ListNode* pHead)
+{
+	if (pHead == NULL) return NULL;
+	// 初始化两个指针快指针与慢指针
+	ListNode * pSlow = pHead;
+	ListNode * pFast = pHead->next;
+	// 移动该两个指针, 当两个指针相同(两者相遇)或者一个指针已经走到终点的时候终止
+	while(pSlow && pFast && pSlow != pFast)
+	{
+		pSlow = pSlow->next;
+		pFast = pFast->next;
+		if(pFast)
+			pFast = pFast->next;
+	}
+	// 两者在环里相遇的情况
+	int nCircle = 1;
+	if(pSlow == pFast && pSlow != NULL)
+	{
+		ListNode *pTMP = pSlow->next;
+		while(pTMP != pFast)
+		{
+			pTMP = pTMP->next;
+			nCircle += 1;
+		}
+	}
+	else//其他情况
+		return NULL;
+	// 根据环的总长度,找到最早的公共节点.
+	// 两个指针一前(先走一个环的长度),一后(开始位置)
+	ListNode * pPer = pHead;
+	ListNode * pTail = pHead;
+	while(nCircle)
+	{
+		nCircle -= 1;
+		pPer = pPer->next;
+	}
+	while(pTail != pPer)
+	{
+		pTail = pTail->next;
+		pPer = pPer->next;
+	}
+	return pTail;
+}
