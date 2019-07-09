@@ -386,6 +386,10 @@ void Mirror(TreeNode *pRoot)
 	Mirror(pRoot->right);
 }
 
+// 1.解决昨天小区周边评分的bug: 第一列影响综合评分时出现bug的问题.
+// 2.协助徐雪东禧泰数据采集采集,协助朱容斌解决代码分支合并的问题,虚拟机工具安装.
+// 3.服务器维护,解决服务器过期问题,给服务器与数据库续费,测试充值后使用情况,并为给客户演示数据做准备.
+// 4.解决版本库创建过程中, 存在的多个git版本时的问题.
 
 
 ListNode* EntryNodeOfLoop(ListNode* pHead)
@@ -404,7 +408,7 @@ ListNode* EntryNodeOfLoop(ListNode* pHead)
 	}
 	// 两者在环里相遇的情况
 	int nCircle = 1;
-	if(pSlow == pFast && pSlow != NULL)
+	if(pSlow == pFast && pFast != NULL)
 	{
 		ListNode *pTMP = pSlow->next;
 		while(pTMP != pFast)
@@ -430,4 +434,11 @@ ListNode* EntryNodeOfLoop(ListNode* pHead)
 		pPer = pPer->next;
 	}
 	return pTail;
+}
+
+
+
+ListNode* deleteDuplication(ListNode* pHead)
+{
+	return NULL;
 }
