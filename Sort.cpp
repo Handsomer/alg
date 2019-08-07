@@ -440,7 +440,21 @@ ListNode* EntryNodeOfLoop(ListNode* pHead)
 
 ListNode* deleteDuplication(ListNode* pHead)
 {
-	return NULL;
+	ListNode* p_run = pHead;
+	if (pHead == NULL or pHead->next == NULL) return pHead;
+	while(p_run && p_run->next)
+	{
+		//出现了重复的数字
+		if (p_run->val == p_run->next->val)
+		{
+			ListNode* p_del = p_run->next;
+			p_run->next = p_run->next->next;
+			//删除重复的节点
+			delete p_del;
+		}
+		p_run = p_run->next;
+	}
+	return pHead;
 }
 
 
@@ -472,3 +486,28 @@ int Fibonacci(int n)
 	return b; 
 }
 
+int test_deleteDuplication()
+{
+	ListNode* p_build = new ListNode(1);
+	ListNode* pHead = p_build;
+	for (int i = 1 ; i < 10; i++)
+	{
+		ListNode* p_node = new ListNode((i / 2) * 2);
+		p_node->val = ( i / 2 ) * 2; 
+		p_node->next = NULL;
+		p_build->next = p_node;
+		p_build = p_build->next;
+	}
+	ListNode* a = pHead;
+	while(a)
+	{
+		cout << a->val << "-----" << endl;
+		a = a->next;
+	}
+	pHead = deleteDuplication(pHead);
+	while(pHead)
+	{
+		cout << pHead->val << endl;
+		pHead = pHead->next;
+	}
+}

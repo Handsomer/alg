@@ -10,6 +10,7 @@ using  namespace std;
 void BubbleSort(int nArray[], int n);
 
 
+
 struct TreeNode {
 	int val;
 	TreeNode *left;
@@ -119,8 +120,8 @@ inline void Swap(int &a, int &b);
 //判断链表是否有环，并如果 有则返回环的开始节点
 ListNode* EntryNodeOfLoop(ListNode* pHead);
 
+
 // 删除链表中的重复节点
 ListNode* deleteDuplication(ListNode* pHead);
 
-
-
+int test_deleteDuplication();

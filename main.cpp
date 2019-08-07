@@ -7,16 +7,18 @@ int main()
 {
     // cout<<"hello worls"<<endl;
     // Fibonacci(12);
-    int ret_value = Fibonacci(12);
-    cout << ret_value << endl;
+    // int ret_value = Fibonacci(3);
+    // cout << ret_value << endl;
     // print_hello();
     // system("pause");
-	return 0;
+    // test_deleteDuplication();
+    test_deleteDuplication();
+    return 0;
 }
 
 /*
 //从尾部打印一个链表
-    ListNode * p_head = NULL;
+    ListNod* p_head = NULL;
     p_head = new ListNode(1);
     ListNode* p_tmp_1 = p_head;
     for (int i = 0; i < 9 ; i++)
