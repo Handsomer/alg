@@ -9,6 +9,7 @@ using  namespace std;
 
 void BubbleSort(int nArray[], int n);
 
+
 struct TreeNode {
 	int val;
 	TreeNode *left;
@@ -23,6 +24,9 @@ struct ListNode {
 			val(x), next(NULL) {
 	}
 };
+
+// Fibonacci 生成
+int Fibonacci(int n);
 
 TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2);
 void  CreateTree1(TreeNode * p_tree);
@@ -48,7 +52,7 @@ int fabonacci(int n);
 
 //566. Reshape the Matrix
 //    实现根据r,c值 返回值
-vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c);
+vector<vector<int> > matrixReshape(vector<vector<int> > & nums, int r, int c);
 
 bool FindNumInNm(int target, vector<vector<int> > array);
 
@@ -117,3 +121,6 @@ ListNode* EntryNodeOfLoop(ListNode* pHead);
 
 // 删除链表中的重复节点
 ListNode* deleteDuplication(ListNode* pHead);
+
+
+

@@ -1,12 +1,16 @@
 #include "alg_lib.h"
+#include <iostream>
+
+using namespace std;
 
 int main()
 {
-    int narry[] = {1,4,2,3,9,6};
-    selectSort(narry,6);
-    for(int i = 0; i < 6; i++)
-        cout<<narry[i]<<endl;
-    system("pause");
+    // cout<<"hello worls"<<endl;
+    // Fibonacci(12);
+    int ret_value = Fibonacci(12);
+    cout << ret_value << endl;
+    // print_hello();
+    // system("pause");
 	return 0;
 }
 

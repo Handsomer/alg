@@ -228,7 +228,7 @@ int fabonacci(int n)
 	return b;
 }
 
-vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c)
+vector<vector<int> > matrixReshape(vector<vector<int> >& nums, int r, int c)
 {
     int rows = nums.size(), cols = nums[0].size();
     if (r * c != rows * cols)  return nums;
@@ -442,3 +442,33 @@ ListNode* deleteDuplication(ListNode* pHead)
 {
 	return NULL;
 }
+
+
+// vector<int> printListFromTailToHead(ListNode* head)
+// {
+// 	std::stack<ListNode*> nodes;
+// 	ListNode* pNode = head;
+// 	while(pNode != NULL)
+// 	{
+// 		cout<<1<<endl;
+// 	}
+
+// }
+int Fibonacci(int n) 
+{
+	// cout<<"this is fibonacci func"<<endl;
+	// return 1;
+	int a = 0;
+	int b = 1;
+	if (n == 0) return 0;
+	if (n == 1) return 1;
+	int tmp = 0;
+	for (int i = 0; i < n; i++)
+	{
+		tmp = a;
+		a = b;
+		b = tmp + a;
+	}   
+	return b; 
+}
+
