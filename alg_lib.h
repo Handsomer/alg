@@ -125,3 +125,5 @@ ListNode* EntryNodeOfLoop(ListNode* pHead);
 ListNode* deleteDuplication(ListNode* pHead);
 
 int test_deleteDuplication();
+
+int jump_step(int n);

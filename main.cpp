@@ -12,7 +12,8 @@ int main()
     // print_hello();
     // system("pause");
     // test_deleteDuplication();
-    test_deleteDuplication();
+    // test_deleteDuplication();
+    cout <<jump_step(3)<< endl;
     return 0;
 }
 

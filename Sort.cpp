@@ -513,3 +513,18 @@ int test_deleteDuplication()
 		pHead = pHead->next;
 	}
 }
+
+int jump_step(int n)
+{
+	if(n == 1) return 1;
+	if(n == 2) return 2;
+	int step_1 = 1;
+	int step_2 = 2;
+	for(int i=3; i<= n; i++)
+	{
+		int tmp = step_1 + step_2;
+		step_1 = step_2;
+		step_2 = tmp;
+	}
+	return step_2;
+}
