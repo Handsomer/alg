@@ -311,13 +311,15 @@ vector<int> printListFromTailToHead(ListNode* head)
 		node.push(p_node);
         p_node = p_node->next;
 	}
+	vector<int> ret_array;
     while(!node.empty())
     {
         p_node = node.top();
+		ret_array.push_back(p_node->val);
         cout << p_node->val << endl;
         node.pop();
     }
-
+	return ret_array;
 }
 
 // 根据前序遍历和中序遍历,重建二叉树
