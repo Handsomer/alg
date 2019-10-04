@@ -10,7 +10,7 @@ def fibonacii_generator(max):
         tmp = a
         a = b
         b = a + tmp
-    print "done"
+    print("done")
 
 #杨辉三角 数列的生成器写法
 def triangles():
@@ -34,3 +34,21 @@ def triangles():
             tmp_list.append(1)
             yield tmp_list
             result.append(tmp_list)
+
+class Solution:
+    def levelOrser(self, root):
+        if not root:
+            return None
+        res = [[root.val]]
+        cur_nodes = [root]
+        next_nodes = []
+        while cur_nodes:
+            for node in cur_nodes:
+                if node.left:
+                    next_nodes.append(node.left)
+                if node.right:
+                    next_nodes.append(node.right)
+            if next_nodes:
+                res.append([i.val for i in next_nodes])
+            cur_nodes = next_nodes
+            next_nodes = []
