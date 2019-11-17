@@ -72,3 +72,28 @@ class Solution:
                 run_list.append(top_elem.right)
         return ret_list
 
+    #层序遍历进阶版本
+    def Print_s(self, pRoot):
+        # write code here
+        if not pRoot:
+            return []
+        run_list, next_line, ret_list = [], [], []
+        run_list.append(pRoot)
+        order = True
+        while True:
+            if not run_list:
+                break
+            print_list = []
+            for i in range(len(run_list)):
+                top_elem = run_list.pop(0)
+                print_list.append(top_elem.val)
+                if top_elem.left:
+                    next_line.append(top_elem.left)
+                if top_elem.right:
+                    next_line.append(top_elem.right)
+            if not order:
+                print_list.reverse()
+            ret_list.append(copy.copy(print_list))
+            order = not order
+            run_list, next_line = copy.copy(next_line), []
+        return ret_list
