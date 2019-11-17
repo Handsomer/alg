@@ -52,3 +52,23 @@ class Solution:
                 res.append([i.val for i in next_nodes])
             cur_nodes = next_nodes
             next_nodes = []
+
+    #层序遍历二叉树
+    def Print(self, pRoot):
+            # write code here
+        if not pRoot:
+            return
+        run_list = []
+        ret_list = []
+        run_list.append(pRoot)
+        while True:
+            if not run_list:
+                break
+            top_elem = run_list.pop(0)
+            ret_list.append(top_elem.val)
+            if top_elem.left:
+                run_list.append(top_elem.left)
+            if top_elem.right:
+                run_list.append(top_elem.right)
+        return ret_list
+
