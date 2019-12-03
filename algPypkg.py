@@ -1,6 +1,8 @@
 #!usr/bin/env python
 #coding: utf-8
 
+import copy
+
 #fibonacii 数列的生成器写法
 def fibonacii_generator(max):
     n ,a,b = 0,0,1
@@ -97,3 +99,39 @@ class Solution:
             order = not order
             run_list, next_line = copy.copy(next_line), []
         return ret_list
+
+
+class printCircle_Solution:
+    def __init__(self):
+        self.matrix = []
+        self.x, self.y = 0, 0
+        self.ret_list = []
+
+    def printCircle(self, circle_nums):
+        #横向向右打印 ->
+        if self.x - circle_nums - 1 >= circle_nums:
+            for i in range(circle_nums, self.x - circle_nums - 1 + 1):
+                self.ret_list.append(self.matrix[circle_nums][i])
+        #纵向向下打印|
+        if self.y - circle_nums - 1 > circle_nums:
+            for i in range(circle_nums + 1, self.y - circle_nums - 1 + 1):
+                self.ret_list.append(self.matrix[i][self.x - circle_nums - 1])
+        #横向向左打印 ->
+        if self.x - circle_nums - 1 > circle_nums:
+            for i in range(self.y - circle_nums - 1, circle_nums-1, -1):
+                self.ret_list.append(self.matrix[self.y - circle_nums - 1][i])
+        #纵向向上打印|
+        if self.y - circle_nums - 1 > circle_nums:
+            for i in range(self.y - circle_nums - 2, circle_nums, -1):
+                self.ret_list.append(self.matrix[i][circle_nums])
+
+    # matrix类型为二维列表，需要返回列表
+    def printMatrix(self, matrix):
+        # write code here
+        import math
+        self.matrix = matrix
+        self.x, self.y = len(matrix[0]), len(matrix)
+        max_circle = math.ceil(min(self.x, self.y)/2)
+        for i in range(max_circle):
+            self.printCircle(i)
+        return self.ret_list
